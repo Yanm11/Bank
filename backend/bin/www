@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+require('dotenv').config(); // Load environment variables
+const dbConnect = require('../config/dbConnect');
+
+const app = require('../app'); // Import the app
+const PORT = process.env.PORT || 3001;
+
+((async function setUp(){
+    await dbConnect();
+    console.log('MongoDB connected');
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+}))();
+
