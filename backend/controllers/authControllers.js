@@ -47,7 +47,7 @@ exports.registerUser = async (req, res) => {
             <p>Welcome aboard, and here's to a prosperous future together!</p>
         `;
 
-        await sendEmail(email, 'Welcome to Or & Sons Finances!', body);
+        await sendEmail(email, 'Welcome to Meiri Bank!', body);
 
         res.status(201).json({message: 'User successfully registered', user: sanitizeUser(newUser)});
     } catch (error) {

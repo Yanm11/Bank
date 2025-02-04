@@ -1,6 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Box, Grid, Typography, Card, CardContent, IconButton, Tooltip } from '@mui/material';
+import {
+    Box,
+    Grid,
+    Paper,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+    Typography,
+    Card,
+    CardContent,
+    IconButton,
+    Tooltip
+} from '@mui/material';
 import { axiosi } from "../config/Axios";
 import Profile from "./Profile";
 
@@ -105,7 +120,7 @@ const AccountPage = () => {
                                 Your Balance
                             </Typography>
                             <Typography variant="h4" sx={{ fontWeight: 'bold', color: '#fff' }}>
-                                ${accountInfo.balance.toFixed(2)}
+                                ${accountInfo.balance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                             </Typography>
                         </CardContent>
 
@@ -196,7 +211,7 @@ const AccountPage = () => {
                                             : ''}
                                     </Typography>
                                     <Typography variant="body2" sx={{ color: isIncome ? 'green' : 'red' }}>
-                                        {isIncome ? '+' : '-'}${transaction.amount.toFixed(2)}
+                                        {isIncome ? '+' : '-'}${transaction.amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                                     </Typography>
                                     <Typography variant="body2">
                                         <strong>Status:</strong> {transaction.status}

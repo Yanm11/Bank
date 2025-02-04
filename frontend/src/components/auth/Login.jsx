@@ -127,7 +127,7 @@ const Login = () => {
                         }}
                     >
                         <Typography variant="h2" sx={{ fontWeight: 'bold', marginBottom: 2 }}>
-                            Or & Sons Finances
+                            Meiri Bank
                         </Typography>
                         <Typography variant="h6" sx={{ marginBottom: 3 }}>
                             Empowering your financial future

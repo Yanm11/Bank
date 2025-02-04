@@ -9,6 +9,8 @@ import Header from './components/Header';
 import NotFoundPage from "./pages/NotFound";
 import ResetPassword from "./pages/ResetPassword";
 import ResetPasswordConfirm from "./pages/ResetPasswordConfirm";
+import NewLogin from "./components/auth/NewLogin";
+import togglePanel from "./components/auth/NewLogin";
 
 const App = () => {
     const LayoutWithHeader = () => (
@@ -22,8 +24,8 @@ const App = () => {
         <>
             <Router>
                 <Routes>
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
+                    <Route path="/login" element={<NewLogin />} />
+                    <Route path="/register" element={<NewLogin/>} />
                     <Route path="/reset-password" element={<ResetPassword />} />
                     <Route path="/reset-password/confirm/:token" element={<ResetPasswordConfirm />} />
 

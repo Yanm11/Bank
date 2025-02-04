@@ -17,6 +17,7 @@ const Header = () => {
     return (
         <header className="header-container">
             <div className="header-left" onClick={() => navigate('/account')}>
+                <h1>Meiri Bank</h1>
                 <h1>Welcome, {userName || 'Guest'}</h1>
             </div>
             <div className="header-right">

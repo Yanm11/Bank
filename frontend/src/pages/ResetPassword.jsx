@@ -90,32 +90,18 @@ const ResetPassword = () => {
 
                 {/* Right Section (Bank Image and Name) */}
                 <Grid item xs={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 4 }}>
-                    <Box
-                        sx={{
-                            textAlign: 'center',
-                            color: 'white',
-                            padding: 4,
-                            backgroundColor: 'rgba(0,0,0,0.87)',
-                            borderRadius: 3,
-                        }}
-                    >
-                        <Typography variant="h2" sx={{ fontWeight: 'bold', marginBottom: 2 }}>
-                            Or & Sons Finances
-                        </Typography>
-                        <Typography variant="h6" sx={{ marginBottom: 3 }}>
-                            Empowering your financial future
-                        </Typography>
-                        <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS9y-hBJS7leDjIyOeFmOdaIQklTmA60XHhA&s"
-                            alt="Bank Logo"
-                            style={{
-                                width: '80%',
-                                maxWidth: 400,
-                                borderRadius: 10,
-                                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)',
+                        <Box
+                            sx={{
+                                position: 'absolute',
+                                top: 0,
+                                left: '50%',
+                                width: '50%',
+                                height: '100%',
+                                backgroundColor: 'rgb(25,59,200)',
+                                transition: 'left 0.6s ease-in-out',
+                                zIndex: 2,
                             }}
                         />
-                    </Box>
                 </Grid>
             </Grid>
         </Box>

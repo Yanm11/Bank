@@ -23,7 +23,7 @@ const Register = () => {
         }
 
         try {
-            const response = await axiosi.post("/auth/register", { name, email, password, phone, address });
+            const response = await axiosi.post( "/auth/register", { name, email, password, phone, address });
             if (response.status === 201) {
                 navigate('/login'); // Redirect to login page on success
             }
@@ -159,7 +159,7 @@ const Register = () => {
                         }}
                     >
                         <Typography variant="h2" sx={{ fontWeight: 'bold', marginBottom: 2 }}>
-                            Or & Sons Finances
+                            Meiri Bank
                         </Typography>
                         <Typography variant="h6" sx={{ marginBottom: 3 }}>
                             Empowering your financial future
